@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
   scan = false
   team_name = ''
   score = ''
+  loc = ''
 
   showDialog = false
   question = ''
@@ -31,16 +32,19 @@ export class DashboardComponent implements OnInit {
     this.http.post(environment.endpoint + '/stats', { 'username': localStorage.getItem('username') }).subscribe((res: any) => {
       this.team_name = res.team_name
       this.score = res.score
+      this.loc = res.loc
     })
   }
 
   scanSuccessHandler(data: any) {
     this.scan = false
     if (data.includes('http')) {
-      if (data == 'https://rb.gy/e3qud6') {
-        window.open('https://www.youtube.com/shorts/c1yPILHeRo4', '_blank')
+      if (data == 'https://www.youtube.com/watch?v=GPXkjtpGCFI') {
+        window.open('https://www.youtube.com/watch?v=GPXkjtpGCFI', '_blank')
+      } else if (data == 'https://www.youtube.com/watch?v=BbeeuzU5Qc8'){
+        window.open('https://www.youtube.com/watch?v=BbeeuzU5Qc8', "_blank")
       } else {
-        window.open(data, "_blank")
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ','_blank')
       }
       console.log(data)
       return
