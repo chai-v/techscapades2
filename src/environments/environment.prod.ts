@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  endpoint: 'https://treasurehunt.chaitanya-sai-v.repl.co',
-  testEndPoint: 'https://TreasureHuntchai.chaitanya-sai-v.repl.co'
+  endpoint: 'https://b0468628-ce2d-4e40-9ded-5df972815166-00-3jjxgcuphzq12.pike.replit.dev',
+  testEndPoint: 'https://b0468628-ce2d-4e40-9ded-5df972815166-00-3jjxgcuphzq12.pike.replit.dev'
 };
